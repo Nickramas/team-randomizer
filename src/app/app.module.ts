@@ -8,11 +8,13 @@ import {ControlsComponent} from './controls/controls.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
+import { TeamComponent } from './team/team.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ControlsComponent
+    ControlsComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,
