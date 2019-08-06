@@ -8,7 +8,9 @@ import {ControlsComponent} from './controls/controls.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
-import { TeamComponent } from './team/team.component';
+import {TeamComponent} from './team/team.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { TeamComponent } from './team/team.component';
     MatToolbarModule,
     MatInputModule,
     MatFormFieldModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
