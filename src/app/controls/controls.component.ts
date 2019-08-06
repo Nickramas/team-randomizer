@@ -9,7 +9,7 @@ export class ControlsComponent implements OnInit {
 
   addMadeInputPlaceholder = 'Add a new Made';
   addMadeButtonText = 'Add';
-  randomizeButtontext = 'Randomize';
+  randomizeButtonText = 'Randomize';
 
   constructor() { }
 
