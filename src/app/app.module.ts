@@ -11,12 +11,14 @@ import {MatButtonModule} from '@angular/material/button';
 import {TeamComponent} from './team/team.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
+import { TeamsComponent } from './teams/teams.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ControlsComponent,
-    TeamComponent
+    TeamComponent,
+    TeamsComponent
   ],
   imports: [
     BrowserModule,
