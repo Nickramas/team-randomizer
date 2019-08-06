@@ -12,6 +12,8 @@ import {TeamComponent} from './team/team.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
 import { TeamsComponent } from './teams/teams.component';
+import {MatIconModule} from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { TeamsComponent } from './teams/teams.component';
     MatFormFieldModule,
     MatButtonModule,
     MatCardModule,
-    MatListModule
+    MatListModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
