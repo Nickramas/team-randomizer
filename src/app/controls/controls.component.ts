@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ControlsComponent implements OnInit {
 
   addMadeInputPlaceholder = 'Add a new Made';
+  addMadeButtonText = 'Add';
 
   constructor() { }
 
