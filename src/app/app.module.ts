@@ -15,7 +15,6 @@ import { TeamsComponent } from './teams/teams.component';
 import {MatIconModule} from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-
 @NgModule({
   declarations: [
     AppComponent,

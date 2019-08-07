@@ -15,6 +15,22 @@ export class TeamsComponent implements OnInit {
         'Rufgan',
         'HellyBelly'
       ]
+    },
+    {
+      name: 'Team 1',
+      mades: [
+        'Marde',
+        'Rufgan',
+        'HellyBelly'
+      ]
+    },
+    {
+      name: 'Team 1',
+      mades: [
+        'Marde',
+        'Rufgan',
+        'HellyBelly'
+      ]
     }
   ];
 
