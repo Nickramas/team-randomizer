@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {Team} from '../models/Team';
+import {TeamService} from '../team/team.service';
+import {Member} from '../models/Member';
+import {MemberService} from '../member.service';
 
 @Component({
   selector: 'app-teams',
@@ -7,20 +11,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamsComponent implements OnInit {
 
-  teams = [
-    {
-      name: 'Team 1',
-      mades: []
-    },
-    {
-      name: 'Team 2',
-      mades: []
-    }
-  ];
+  teams: Team[] = [];
 
-  constructor() { }
+  constructor(private teamService: TeamService) { }
 
   ngOnInit() {
+    this.addTeam('Team 1');
+    this.addTeam('Team 2');
   }
 
+  addTeam(name: string): void {
+    const newTeam: Team = this.teamService.create(name);
+    this.teams.push(newTeam);
+  }
 }

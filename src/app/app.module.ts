@@ -14,6 +14,7 @@ import {MatListModule} from '@angular/material/list';
 import { TeamsComponent } from './teams/teams.component';
 import {MatIconModule} from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatCardModule,
     MatListModule,
     MatIconModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
