@@ -29,4 +29,14 @@ export class ControlsComponent implements OnInit {
     team.members.push(newMember);
     this.newMemberName = '';
   }
+
+  randomize(): void {
+    this.teamService.removeAllMembersFromAllTeams();
+    const teams = this.teamService.getTeams();
+    const allMembers = this.memberService.getAllMembers();
+
+    allMembers.forEach(member => {
+      this.memberService.joinRandomTeam(teams, member);
+    });
+  }
 }

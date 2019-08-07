@@ -47,4 +47,12 @@ export class TeamService {
   getTeams(): Team[] {
     return this.teams;
   }
+
+  removeAllMembersFromAllTeams(): Team[] {
+    this.teams.forEach(team => {
+      team.members = [];
+    });
+
+    return this.teams;
+  }
 }
