@@ -12,7 +12,7 @@ export class TeamService {
   constructor() {
   }
 
-  static create(name: string): Team {
+  create(name: string): Team {
     const id = uuid.v4();
     const members: Member[] = [];
 
@@ -23,12 +23,12 @@ export class TeamService {
     };
   }
 
-  static addMember(team: Team, member: Member): Team {
+  addMember(team: Team, member: Member): Team {
     team.members.push(member);
     return team;
   }
 
-  static removeMember(team: Team, member: Member): Team {
+  removeMember(team: Team, member: Member): Team {
     const memberIndex = team.members.findIndex(m => m.id === member.id);
 
     if (memberIndex === -1) {

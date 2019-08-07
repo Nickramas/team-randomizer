@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
+import {Team} from '../models/Team';
 
 @Component({
   selector: 'app-team',
@@ -7,12 +8,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class TeamComponent implements OnInit {
 
-  teamName = 'Team';
-  mades = [
-    {
-      name: 'Made'
-    }
-  ];
+  @Input() team: Team;
 
   constructor() {
   }
