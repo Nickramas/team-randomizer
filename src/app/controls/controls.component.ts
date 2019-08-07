@@ -25,7 +25,6 @@ export class ControlsComponent implements OnInit {
     const team = this.teamService.getTeams()[0];
     team.members.push(newMember);
     this.newMemberName = '';
-    console.log(this.teamService.getTeams());
   }
 
 }
