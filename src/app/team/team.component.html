@@ -1,0 +1,10 @@
+<mat-card fxFlex>
+  <mat-card-title>{{ teamName }}</mat-card-title>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let made of mades">
+       {{ made.name }}
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
