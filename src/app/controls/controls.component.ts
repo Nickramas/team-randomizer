@@ -21,10 +21,12 @@ export class ControlsComponent implements OnInit {
   }
 
   addMemberToTeam1(): void {
+    if (this.newMemberName.length === 0) {
+      return;
+    }
     const newMember = this.memberService.create(this.newMemberName);
     const team = this.teamService.getTeams()[0];
     team.members.push(newMember);
     this.newMemberName = '';
   }
-
 }
