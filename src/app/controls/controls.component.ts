@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ControlsComponent implements OnInit {
 
-  addMadeInputPlaceholder = 'Add a new Made';
+  addMadeInputPlaceholder = 'Add a new Member';
   addMadeButtonText = 'Add';
   randomizeButtonText = 'Randomize';
 

@@ -1,7 +1,7 @@
-import {Made} from './Made';
+import {Member} from './Member';
 
 export interface Team {
-  id: number;
+  id: string;
   name: string;
-  members: Made[];
+  members: Member[];
 }
