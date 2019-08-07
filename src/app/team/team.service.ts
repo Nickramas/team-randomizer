@@ -9,18 +9,22 @@ import uuid from 'uuid';
 })
 export class TeamService {
 
+  teams: Team[] = [];
+
   constructor() {
   }
 
   create(name: string): Team {
     const id = uuid.v4();
     const members: Member[] = [];
-
-    return {
+    const newTeam: Team = {
       id,
       name,
       members
     };
+
+    this.teams.push(newTeam);
+    return newTeam;
   }
 
   addMember(team: Team, member: Member): Team {
@@ -38,5 +42,9 @@ export class TeamService {
     team.members.splice(memberIndex, 1);
 
     return team;
+  }
+
+  getTeams(): Team[] {
+    return this.teams;
   }
 }
