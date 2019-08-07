@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {Team} from '../models/Team';
 import {Member} from '../models/Member';
 // @ts-ignore
-import uuid = require('uuid');
+import uuid from 'uuid';
 
 @Injectable({
   providedIn: 'root'
