@@ -3,7 +3,7 @@
   <mat-card-content>
     <mat-list>
       <mat-list-item *ngFor="let member of team.members">
-       {{ member.name }}
+       <app-member [member]="member"></app-member>
       </mat-list-item>
     </mat-list>
   </mat-card-content>
