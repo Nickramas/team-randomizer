@@ -32,7 +32,8 @@ export class TeamService {
     return team;
   }
 
-  removeMember(team: Team, member: Member): Team {
+  removeMember(team: Team, member: Member): void {
+
     const memberIndex = team.members.findIndex(m => m.id === member.id);
 
     if (memberIndex === -1) {
@@ -40,12 +41,14 @@ export class TeamService {
     }
 
     team.members.splice(memberIndex, 1);
-
-    return team;
   }
 
   getTeams(): Team[] {
     return this.teams;
+  }
+
+  setTeams(teams: Team[]): void {
+    this.teams = teams;
   }
 
   removeAllMembersFromAllTeams(): Team[] {

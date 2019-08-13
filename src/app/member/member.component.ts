@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Member} from '../models/Member';
+import { MemberService } from './member.service';
 
 @Component({
   selector: 'app-member',
@@ -8,11 +9,24 @@ import {Member} from '../models/Member';
 })
 export class MemberComponent implements OnInit {
 
+  mouseIsHovering = false;
   @Input() member: Member;
 
-  constructor() { }
+  constructor(private memberService: MemberService) { }
 
   ngOnInit() {
+  }
+
+  onMouseOver() {
+    this.mouseIsHovering = true;
+  }
+
+  onMouseLeave() {
+    this.mouseIsHovering = false;
+  }
+
+  deleteMember() {
+    this.memberService.remove(this.member);
   }
 
 }
