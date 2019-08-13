@@ -15,13 +15,15 @@ import { TeamsComponent } from './teams/teams.component';
 import {MatIconModule} from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {FormsModule} from '@angular/forms';
+import { MemberComponent } from './member/member.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ControlsComponent,
     TeamComponent,
-    TeamsComponent
+    TeamsComponent,
+    MemberComponent
   ],
   imports: [
     BrowserModule,

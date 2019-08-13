@@ -1,0 +1,17 @@
+<div class="member"
+     fxLayout="row"
+     (mouseover)="onMouseOver()"
+     (mouseleave)="onMouseLeave()">
+  <div fxFlex="1 1 auto" fxFlexAlign="center">
+    {{ member.name }}
+  </div>
+  <div fxFlex="1 1 auto" class="delete-button-container">
+    <button mat-mini-fab color="warn"
+            fxShow fxFlexAlign="center"
+            [fxShow]="mouseIsHovering"
+            [fxShow.lt-md]="true"
+            (click)="deleteMember()">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</div>
