@@ -25,7 +25,8 @@ export class MemberComponent implements OnInit {
     this.mouseIsHovering = false;
   }
 
-  deleteMember() {
+  // delete member
+  onClickDelete() {
     this.memberService.remove(this.member);
   }
 

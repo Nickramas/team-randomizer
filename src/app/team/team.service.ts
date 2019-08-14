@@ -14,6 +14,14 @@ export class TeamService {
   constructor() {
   }
 
+  getTeams(): Team[] {
+    return this.teams;
+  }
+
+  setTeams(teams: Team[]): void {
+    this.teams = teams;
+  }
+
   create(name: string): Team {
     const id = uuid.v4();
     const members: Member[] = [];
@@ -41,14 +49,6 @@ export class TeamService {
     }
 
     team.members.splice(memberIndex, 1);
-  }
-
-  getTeams(): Team[] {
-    return this.teams;
-  }
-
-  setTeams(teams: Team[]): void {
-    this.teams = teams;
   }
 
   removeAllMembersFromAllTeams(): Team[] {
