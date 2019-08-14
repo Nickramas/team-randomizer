@@ -31,7 +31,7 @@ export class ControlsComponent implements OnInit {
   onClickRandomize(): void {
     this.teamService.removeAllMembersFromAllTeams();
     const teams = this.teamService.getTeams();
-    const allMembers = this.memberService.getAllMembers();
+    const allMembers = this.memberService.getMembers();
 
     allMembers.forEach(member => {
       this.memberService.joinRandomTeam(teams, member);

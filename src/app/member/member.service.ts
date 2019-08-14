@@ -15,6 +15,10 @@ export class MemberService {
   public constructor(private teamService: TeamService) {
   }
 
+  public getMembers(): Member[] {
+    return this.members;
+  }
+
   public create(name: string): Member {
     const newMember: Member = {
       id: uuid.v4(),
@@ -23,10 +27,6 @@ export class MemberService {
 
     this.members.push(newMember);
     return newMember;
-  }
-
-  public getAllMembers(): Member[] {
-    return this.members;
   }
 
   public remove(member: Member) {
@@ -39,24 +39,21 @@ export class MemberService {
 
       if (memberIndex !== -1) {
         members.splice(memberIndex, 1);
-        this.removeFromMembers(member);
+        this.removeFromGeneralMembersArray(member);
       }
     }
-
-    // this.teamService.setTeams(teams);
-  }
-
-  private removeFromMembers(member: Member): void {
-    const memberIntex = this.members.findIndex(m => {
-      return member.id === m.id;
-    });
-
-    this.members.splice(memberIntex, 1);
   }
 
   public joinRandomTeam(avalableTeams: Team[], member: Member): void {
     const maxTeamIndex: number = avalableTeams.length;
     const randomTeamIndex: number = Math.floor(Math.random() * maxTeamIndex);
     avalableTeams[randomTeamIndex].members.push(member);
+  }
+
+  private removeFromGeneralMembersArray(member: Member): void {
+    const memberIntex = this.members.findIndex(m => {
+      return member.id === m.id;
+    });
+    this.members.splice(memberIntex, 1);
   }
 }
