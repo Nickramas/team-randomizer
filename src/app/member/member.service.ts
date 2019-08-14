@@ -17,7 +17,7 @@ export class MemberService {
 
   public getMembers(): Member[] {
     return this.members;
-  }
+  } 
 
   public create(name: string): Member {
     const newMember: Member = {
