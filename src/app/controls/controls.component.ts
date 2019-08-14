@@ -9,10 +9,6 @@ import {TeamService} from '../team/team.service';
 })
 export class ControlsComponent implements OnInit {
 
-  addMadeInputPlaceholder = 'Add a new Member';
-  addMadeButtonText = 'Add';
-  randomizeButtonText = 'Randomize';
-
   newMemberName = '';
 
   constructor(private memberService: MemberService, private teamService: TeamService) { }
@@ -20,7 +16,8 @@ export class ControlsComponent implements OnInit {
   ngOnInit() {
   }
 
-  addMemberToTeam1(): void {
+  // Add new Member
+  onClickAdd(): void {
     if (this.newMemberName.length === 0) {
       return;
     }
@@ -30,7 +27,8 @@ export class ControlsComponent implements OnInit {
     this.newMemberName = '';
   }
 
-  randomize(): void {
+  // Randomize Members
+  onClickRandomize(): void {
     this.teamService.removeAllMembersFromAllTeams();
     const teams = this.teamService.getTeams();
     const allMembers = this.memberService.getAllMembers();
